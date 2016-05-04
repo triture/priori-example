@@ -1,0 +1,26 @@
+{
+  "project_name" : "Priori Example",
+
+  "lang" : "en",
+
+  "meta" : [],
+
+  "link" : [
+    "<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>"
+  ],
+
+  "dependencies" : [
+    "priori-fontawesome",
+    "priori-bootstrap",
+    "priori-scenemanager",
+    "actuate"
+  ],
+
+  "main" : "PriDemoApp",
+
+  "src" : [
+    "src"
+  ],
+
+  "output" : "build"
+}
