@@ -1,0 +1,11 @@
+language: haxe
+
+install:
+  - haxelib install jQueryExtern
+  - haxelib install priori
+  - haxelib install priori-bootstrap
+  - haxelib install priori-fontawesome
+  - haxelib install priori-scenemanager
+
+script:
+  - haxelib run priori build

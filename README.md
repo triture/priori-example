@@ -5,7 +5,7 @@
 Follow the instrucions or go to [online version](http://priori.triture.com/example).
 
 ## Installation
-Requires [Haxe](http://haxe.org) 3.1.0+.
+Requires [Haxe](http://haxe.org) 3.2.1+.
 
 #### 1. Install Priori
 * Install jQueryExtern lib via [haxelib](http://haxe.org/doc/haxelib/using_haxelib): `haxelib install jQueryExtern`
