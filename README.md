@@ -1,4 +1,4 @@
-![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.md) [![Build Status](https://travis-ci.org/triture/priori-example.svg?style=flat)](https://travis-ci.org/triture/priori-example)
 
 # Priori Example Project
 
