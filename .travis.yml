@@ -6,6 +6,7 @@ install:
   - haxelib install priori-bootstrap
   - haxelib install priori-fontawesome
   - haxelib install priori-scenemanager
+  - haxelib install actuate
 
 script:
   - haxelib run priori build
