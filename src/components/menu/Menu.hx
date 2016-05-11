@@ -1,5 +1,6 @@
 package components.menu;
 
+import view.content.examples.BorderContent;
 import view.content.examples.DatagridContent;
 import view.content.examples.BootstrapContent;
 import view.content.examples.DisableContent;
@@ -27,6 +28,7 @@ class Menu extends PriGroup {
         this.btList.push(new MenuButton(PriFaIconType.BOLD, "Bootstrap Components", BootstrapContent));
         this.btList.push(new MenuButton(PriFaIconType.BAN, "Cascating Disable", DisableContent));
         this.btList.push(new MenuButton(PriFaIconType.TABLE, "Datagrid", DatagridContent));
+        this.btList.push(new MenuButton(PriFaIconType.SQUARE_O, "Border Examples", BorderContent));
 
         this.addChildList(this.btList);
 
