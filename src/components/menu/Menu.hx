@@ -1,5 +1,6 @@
 package components.menu;
 
+import view.content.examples.WorkflowContent;
 import view.content.examples.BorderContent;
 import view.content.examples.DatagridContent;
 import view.content.examples.BootstrapContent;
@@ -23,6 +24,7 @@ class Menu extends PriGroup {
 
         this.btList = [];
         this.btList.push(new MenuButton(PriFaIconType.CUBE, "Priori Basics", BasicContent));
+        this.btList.push(new MenuButton(PriFaIconType.EXCHANGE, "PriGroup Workflow", WorkflowContent));
         this.btList.push(new MenuButton(PriFaIconType.OBJECT_GROUP, "Scrollers and Layouts", ContainerContent));
         this.btList.push(new MenuButton(PriFaIconType.FONT, "Text", TextContent));
         this.btList.push(new MenuButton(PriFaIconType.BOLD, "Bootstrap Components", BootstrapContent));
