@@ -68,7 +68,7 @@ class FormExample extends PriGroup {
     }
 
     private function onButton(e:PriTapEvent):Void {
-        this.info.text = "Button OK clicked...";
+        this.info.text = "Address is on display list? " + this.address.hasApp();
 
         this.invalidate();
         this.validate();

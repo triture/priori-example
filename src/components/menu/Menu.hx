@@ -1,7 +1,7 @@
 package components.menu;
 
-import view.content.examples.WorkflowContent;
 import view.content.examples.BorderContent;
+import view.content.examples.WorkflowContent;
 import view.content.examples.DatagridContent;
 import view.content.examples.BootstrapContent;
 import view.content.examples.DisableContent;

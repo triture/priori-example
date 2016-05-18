@@ -27,13 +27,14 @@ class BorderContent extends PriGroup {
         this.addChild(this.reference);
 
         this.container1 = new PriContainer();
+        this.container1.alpha = 0.5;
         this.container1.bgColor = 0xFFFFFF;
-        this.container1.border = new PriBorderStyle(3, 0x000000);
+        this.container1.border = new PriBorderStyle(10, 0x000000);
         this.container1.corners = [0, 0, 0, 15];
         this.addChild(this.container1);
 
         this.container2 = new PriContainer();
-        this.container2.bgColor = 0x00dddd;
+        this.container2.bgColor = 0xFFFF00;
         this.container1.addChild(this.container2);
 
         this.container3 = new PriContainer();
