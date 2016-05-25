@@ -1,5 +1,7 @@
 package components.menu;
 
+import priori.view.container.PriScrollableContainer;
+import view.content.examples.NineSliceContent;
 import view.content.examples.BorderContent;
 import view.content.examples.WorkflowContent;
 import view.content.examples.DatagridContent;
@@ -14,6 +16,7 @@ import priori.view.container.PriGroup;
 class Menu extends PriGroup {
 
     private var btList:Array<MenuButton>;
+    private var scroller:PriScrollableContainer;
 
     public function new() {
         super();
@@ -21,6 +24,9 @@ class Menu extends PriGroup {
 
     override private function setup():Void {
         this.bgColor = 0x19385F;
+
+        this.scroller = new PriScrollableContainer();
+        this.addChild(scroller);
 
         this.btList = [];
         this.btList.push(new MenuButton(PriFaIconType.CUBE, "Priori Basics", BasicContent));
@@ -31,8 +37,9 @@ class Menu extends PriGroup {
         this.btList.push(new MenuButton(PriFaIconType.BAN, "Cascating Disable", DisableContent));
         this.btList.push(new MenuButton(PriFaIconType.TABLE, "Datagrid", DatagridContent));
         this.btList.push(new MenuButton(PriFaIconType.SQUARE_O, "Border Examples", BorderContent));
+        this.btList.push(new MenuButton(PriFaIconType.TH, "Nine-Slice Examples", NineSliceContent));
 
-        this.addChildList(this.btList);
+        this.scroller.addChildList(this.btList);
 
         // open first button
         this.btList[0].openContent();
@@ -41,6 +48,9 @@ class Menu extends PriGroup {
     override private function paint():Void {
         var i:Int = 0;
         var n:Int = this.btList.length;
+
+        this.scroller.width = this.width;
+        this.scroller.height = this.height;
 
         while (i < n) {
             this.btList[i].width = this.width;
