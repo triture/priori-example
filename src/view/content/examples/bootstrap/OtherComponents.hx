@@ -50,19 +50,19 @@ class OtherComponents extends PriGroup {
 
         this.image_ROUNDED = new PriBSImage("image_example");
         this.image_ROUNDED.width = 100;
-        this.image_ROUNDED.scaleY = this.image_ROUNDED.scaleX;
+        this.image_ROUNDED.imageScaleY = this.image_ROUNDED.imageScaleX;
         this.image_ROUNDED.imageStyle = PriBSImageStyle.ROUNDED;
         this.layout1.addChild(this.image_ROUNDED);
 
         this.image_CIRCLE = new PriBSImage("image_example");
         this.image_CIRCLE.width = 100;
-        this.image_CIRCLE.scaleY = this.image_CIRCLE.scaleX;
+        this.image_CIRCLE.imageScaleY = this.image_CIRCLE.imageScaleX;
         this.image_CIRCLE.imageStyle = PriBSImageStyle.CIRCLE;
         this.layout1.addChild(this.image_CIRCLE);
 
         this.image_THUMBNAIL = new PriBSImage("image_example");
         this.image_THUMBNAIL.width = 100;
-        this.image_THUMBNAIL.scaleY = this.image_THUMBNAIL.scaleX;
+        this.image_THUMBNAIL.imageScaleY = this.image_THUMBNAIL.imageScaleX;
         this.image_THUMBNAIL.imageStyle = PriBSImageStyle.THUMBNAIL;
         this.layout1.addChild(this.image_THUMBNAIL);
 

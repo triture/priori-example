@@ -94,7 +94,7 @@ class BasicContent extends PriGroup {
 
 
         this.preloadedImage.width = this.width * 0.3;
-        this.preloadedImage.scaleY = this.preloadedImage.scaleX;
+        this.preloadedImage.imageScaleY = this.preloadedImage.imageScaleX;
         this.preloadedImage.centerX = this.width / 2;
         this.preloadedImage.centerY = this.height / 2;
 

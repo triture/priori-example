@@ -1,5 +1,6 @@
 package components.menu;
 
+import view.content.examples.TransformContent;
 import priori.view.container.PriScrollableContainer;
 import view.content.examples.NineSliceContent;
 import view.content.examples.BorderContent;
@@ -38,6 +39,7 @@ class Menu extends PriGroup {
         this.btList.push(new MenuButton(PriFaIconType.TABLE, "Datagrid", DatagridContent));
         this.btList.push(new MenuButton(PriFaIconType.SQUARE_O, "Border Examples", BorderContent));
         this.btList.push(new MenuButton(PriFaIconType.TH, "Nine-Slice Examples", NineSliceContent));
+        this.btList.push(new MenuButton(PriFaIconType.FLASK, "Effects", TransformContent));
 
         this.scroller.addChildList(this.btList);
 
@@ -54,9 +56,9 @@ class Menu extends PriGroup {
 
         while (i < n) {
             this.btList[i].width = this.width;
-            this.btList[i].height = 60;
+            this.btList[i].height = 40;
             this.btList[i].x = 0;
-            this.btList[i].y = i * 60;
+            this.btList[i].y = i * 40;
 
             i++;
         }
