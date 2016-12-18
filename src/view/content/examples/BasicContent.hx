@@ -1,7 +1,6 @@
 package view.content.examples;
 
 import priori.event.PriTapEvent;
-import priori.audio.PriAudio;
 import priori.style.font.PriFontStyleAlign;
 import priori.style.font.PriFontStyle;
 import priori.view.PriImage;
@@ -23,8 +22,6 @@ class BasicContent extends PriGroup {
     private var label4:PriText;
     private var label5:PriText;
 
-    private var audio:PriAudio;
-
     public function new() {
         super();
     }
@@ -45,8 +42,6 @@ class BasicContent extends PriGroup {
         this.quad4 = new PriDisplay();
         this.quad4.corners = [5, 10, 15];
         this.addChild(this.quad4);
-
-        this.audio = new PriAudio("audio_example");
 
         this.preloadedImage = new PriImage("image_example");
         this.preloadedImage.addEventListener(PriTapEvent.TAP, onTapImage);
@@ -72,7 +67,7 @@ class BasicContent extends PriGroup {
         this.addChild(this.label4);
 
         this.label5 = new PriText();
-        this.label5.html = "Preloaded Image<br><b>(Click to play sound)<b>";
+        this.label5.html = "Preloaded Image";
         this.label5.fontStyle = new PriFontStyle(PriFontStyleAlign.CENTER);
         this.addChild(this.label5);
     }
@@ -117,7 +112,7 @@ class BasicContent extends PriGroup {
     }
 
     private function onTapImage(e:PriTapEvent):Void {
-        this.audio.play();
+
     }
 
 }

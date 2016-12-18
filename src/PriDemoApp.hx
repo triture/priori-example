@@ -1,6 +1,5 @@
 package ;
 
-import priori.assets.AssetAudio;
 import view.content.ContentScene;
 import priori.assets.AssetImage;
 import priori.assets.AssetManager;
@@ -21,7 +20,6 @@ class PriDemoApp extends PriApp {
         AssetManager.g().addToQueue(new AssetImage("image_example", "assets/media_image.jpg"));
         AssetManager.g().addToQueue(new AssetImage("nineslice_example_1", "assets/nineslicetest01.png"));
         AssetManager.g().addToQueue(new AssetImage("nineslice_example_2", "assets/nineslicetest02.png"));
-        AssetManager.g().addToQueue(new AssetAudio("audio_example", "assets/media_audio.mp3", "assets/media_audio.ogg"));
 
         SceneManager.g().preload(ContentScene, PreloadScene, this.onErrorCallBack);
     }
