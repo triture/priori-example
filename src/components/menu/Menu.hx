@@ -1,5 +1,6 @@
 package components.menu;
 
+import view.content.examples.PerformanceTest;
 import view.content.examples.TransformContent;
 import priori.view.container.PriScrollableContainer;
 import view.content.examples.NineSliceContent;
@@ -40,6 +41,7 @@ class Menu extends PriGroup {
         this.btList.push(new MenuButton(PriFaIconType.SQUARE_O, "Border Examples", BorderContent));
         this.btList.push(new MenuButton(PriFaIconType.TH, "Nine-Slice Examples", NineSliceContent));
         this.btList.push(new MenuButton(PriFaIconType.FLASK, "Effects", TransformContent));
+        this.btList.push(new MenuButton(PriFaIconType.COG, "Performance Test", PerformanceTest));
 
         this.scroller.addChildList(this.btList);
 
