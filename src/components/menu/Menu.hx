@@ -1,5 +1,6 @@
 package components.menu;
 
+import view.content.examples.MouseContent;
 import view.content.examples.PerformanceTest;
 import view.content.examples.TransformContent;
 import priori.view.container.PriScrollableContainer;
@@ -42,6 +43,7 @@ class Menu extends PriGroup {
         this.btList.push(new MenuButton(PriFaIconType.TH, "Nine-Slice Examples", NineSliceContent));
         this.btList.push(new MenuButton(PriFaIconType.FLASK, "Effects", TransformContent));
         this.btList.push(new MenuButton(PriFaIconType.COG, "Performance Test", PerformanceTest));
+        this.btList.push(new MenuButton(PriFaIconType.MOUSE_POINTER, "Mouse", MouseContent));
 
         this.scroller.addChildList(this.btList);
 
