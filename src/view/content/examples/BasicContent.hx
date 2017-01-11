@@ -1,5 +1,7 @@
 package view.content.examples;
 
+import priori.geom.PriGeomBox;
+import priori.app.PriApp;
 import priori.event.PriTapEvent;
 import priori.style.font.PriFontStyleAlign;
 import priori.style.font.PriFontStyle;
@@ -44,7 +46,7 @@ class BasicContent extends PriGroup {
         this.addChild(this.quad4);
 
         this.preloadedImage = new PriImage("image_example");
-        this.preloadedImage.addEventListener(PriTapEvent.TAP, onTapImage);
+        this.preloadedImage.addEventListener(PriTapEvent.TAP_DOWN, onTapDown);
         this.preloadedImage.corners = [5, 10, 15, 20];
         this.addChild(this.preloadedImage);
 
@@ -67,7 +69,7 @@ class BasicContent extends PriGroup {
         this.addChild(this.label4);
 
         this.label5 = new PriText();
-        this.label5.html = "Preloaded Image";
+        this.label5.html = "Drag this image";
         this.label5.fontStyle = new PriFontStyle(PriFontStyleAlign.CENTER);
         this.addChild(this.label5);
     }
@@ -111,8 +113,18 @@ class BasicContent extends PriGroup {
         this.label5.centerY = this.preloadedImage.maxY + margin;
     }
 
-    private function onTapImage(e:PriTapEvent):Void {
+    private function onTapDown(e:PriTapEvent):Void {
+        this.preloadedImage.removeEventListener(PriTapEvent.TAP_DOWN, this.onTapDown);
+        PriApp.g().addEventListener(PriTapEvent.TAP_UP, this.onTapUp);
 
+        this.preloadedImage.startDrag(true, new PriGeomBox(0, 0, this.width - this.preloadedImage.width, this.height - this.preloadedImage.height));
+    }
+
+    private function onTapUp(e:PriTapEvent):Void {
+        PriApp.g().removeEventListener(PriTapEvent.TAP_UP, this.onTapUp);
+        this.preloadedImage.addEventListener(PriTapEvent.TAP_DOWN, this.onTapDown);
+
+        this.preloadedImage.stopDrag();
     }
 
 }
