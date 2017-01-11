@@ -1,5 +1,6 @@
 package view.content.examples;
 
+import priori.geom.PriGeomPoint;
 import priori.event.PriTapEvent;
 import motion.Actuate;
 import priori.view.text.PriText;
@@ -59,23 +60,27 @@ class MouseContent extends PriGroup {
     }
 
     private function onTap(e:PriMouseEvent):Void {
-        this.addChild(new Spot(e.x, e.y));
+        var mp:PriGeomPoint = this.mousePoint;
+
+        this.addChild(new Spot(mp.x, mp.y));
     }
 
     private function onMove(e:PriMouseEvent):Void {
 
-        this.hline.x = 0;
-        this.hline.centerY = e.y;
+        var mp:PriGeomPoint = this.mousePoint;
 
-        this.hlabel.text = Std.string(e.y);
+        this.hline.x = 0;
+        this.hline.centerY = mp.y;
+
+        this.hlabel.text = Std.string(mp.y);
         this.hlabel.x = 2;
         this.hlabel.y = this.hline.y + 2;
         if (this.hlabel.maxY > this.height) this.hlabel.maxY = this.hline.y - 2;
 
-        this.vline.centerX = e.x;
+        this.vline.centerX = mp.x;
         this.vline.y = 0;
 
-        this.vlabel.text = Std.string(e.x);
+        this.vlabel.text = Std.string(mp.x);
         this.vlabel.x = this.vline.x + 2;
         this.vlabel.maxY = 2;
         if (this.vlabel.x + this.vlabel.height > this.width) this.vlabel.x = this.vline.x - this.vlabel.height - 2;
