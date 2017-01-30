@@ -36,9 +36,7 @@ class PerformanceTest extends PriGroup {
                     l.push(item);
                 }
 
-                for (i in 0 ... l.length) {
-                    this.addChild(l[i]);
-                }
+                this.addChildList(l);
 
                 t.text = 'Creating $totalItens PriDisplay elements in ${Std.string(Date.now().getTime() - timeStart)}ms';
             },
