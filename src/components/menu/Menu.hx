@@ -1,5 +1,6 @@
 package components.menu;
 
+import view.content.examples.FormStyleContent;
 import view.content.examples.MouseContent;
 import view.content.examples.PerformanceTest;
 import view.content.examples.TransformContent;
@@ -44,6 +45,7 @@ class Menu extends PriGroup {
         this.btList.push(new MenuButton(PriFaIconType.FLASK, "Effects", TransformContent));
         this.btList.push(new MenuButton(PriFaIconType.COG, "Performance Test", PerformanceTest));
         this.btList.push(new MenuButton(PriFaIconType.MOUSE_POINTER, "Mouse", MouseContent));
+        this.btList.push(new MenuButton(PriFaIconType.MAGIC, "Form Styles", FormStyleContent));
 
         this.scroller.addChildList(this.btList);
 
