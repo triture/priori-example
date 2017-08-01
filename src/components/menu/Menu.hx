@@ -1,5 +1,6 @@
 package components.menu;
 
+import view.content.examples.WebFrameContent;
 import view.content.examples.FormStyleContent;
 import view.content.examples.MouseContent;
 import view.content.examples.PerformanceTest;
@@ -34,6 +35,7 @@ class Menu extends PriGroup {
 
         this.btList = [];
         this.btList.push(new MenuButton(PriFaIconType.CUBE, "Priori Basics", BasicContent));
+        this.btList.push(new MenuButton(PriFaIconType.TH_LARGE, "Web Frame", WebFrameContent));
         this.btList.push(new MenuButton(PriFaIconType.EXCHANGE, "PriGroup Workflow", WorkflowContent));
         this.btList.push(new MenuButton(PriFaIconType.OBJECT_GROUP, "Scrollers and Layouts", ContainerContent));
         this.btList.push(new MenuButton(PriFaIconType.FONT, "Text", TextContent));

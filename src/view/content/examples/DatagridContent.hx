@@ -68,22 +68,17 @@ class DatagridContent extends PriGroup {
                 val : 1000,
                 label : "1000x"
             }
-            //
-//            ,{
-//                val : 10000,
-//                label : "10000x"
-//            }
         ];
         this.multiInput.addEventListener(PriEvent.CHANGE, onChange);
         this.addChild(this.multiInput);
 
         this.grid = new PriDataGrid();
         this.grid.columns = [
-            new PriGridColumn("#", "#ROW_LINE", PriGridColumnSizeType.FIXED, 100, false),
+            new PriGridColumn("#", "#ROW_LINE", PriGridColumnSizeType.FIXED, 90, false),
             new PriGridColumn("Color Name", "name"),
-            new PriGridColumn("Hex Value", "hex", PriGridColumnSizeType.FIXED, 150, false),
-            new PriGridColumn("RGB Value", "rgb", PriGridColumnSizeType.FIXED, 150, false),
-            new PriGridColumn("Color View", "hex", ColorCell, PriGridColumnSizeType.FIXED, 150, false)
+            new PriGridColumn("Hex Value", "hex", PriGridColumnSizeType.FIXED, 90, false),
+            new PriGridColumn("RGB Value", "rgb", PriGridColumnSizeType.FIXED, 130, false),
+            new PriGridColumn("Color View", "hex", ColorCell, PriGridColumnSizeType.FIT, false)
         ];
         this.addChild(this.grid);
 

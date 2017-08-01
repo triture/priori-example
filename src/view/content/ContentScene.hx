@@ -1,10 +1,9 @@
 package view.content;
 
-import priori.view.text.PriText;
-import priori.view.PriDisplay;
-import components.content.ContentManager;
 import components.menu.Menu;
+import components.content.ContentManager;
 import priori.scene.view.PriScene;
+import priori.system.PriDevice;
 
 class ContentScene extends PriScene {
 
@@ -16,25 +15,6 @@ class ContentScene extends PriScene {
     }
 
     override private function setup():Void {
-//
-//        var t:PriText = new PriText();
-//        this.addChild(t);
-//
-//        var timeStart:Float = Date.now().getTime();
-//
-//        for (i in 0 ... 10000) {
-//
-//            var item:PriDisplay = new PriDisplay();
-//            item.x = i*2;
-//            item.y = 30 + i;
-//            item.bgColor = Std.int(0xFFFFFF * Math.random());
-//            this.addChild(item);
-//
-//        }
-//
-//
-//        t.text = "t3 : " + Std.string(Date.now().getTime() - timeStart);
-
         this.menu = new Menu();
         this.addChild(this.menu);
 
@@ -45,12 +25,17 @@ class ContentScene extends PriScene {
     override private function paint():Void {
         this.menu.x = 0;
         this.menu.y = 0;
-        this.menu.width = 250;
         this.menu.height = this.height;
 
-        this.content.x = 250;
+        if (PriDevice.isMobileDevice()) {
+            this.menu.width = 60;
+        } else {
+            this.menu.width = 250;
+        }
+
+        this.content.x = this.menu.maxX;
         this.content.y = 0;
-        this.content.width = this.width - 250;
+        this.content.width = this.width - this.content.x;
         this.content.height = this.height;
     }
 }

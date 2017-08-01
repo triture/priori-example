@@ -24,8 +24,9 @@ class PerformanceScene extends PriScene {
         var timeStart:Float = Date.now().getTime();
 
         var l:Array<PriDisplay> = [];
+        var total:Int = 10000;
 
-        for (i in 0 ... 50000) {
+        for (i in 0 ... total) {
 
             var item:PriDisplay = new PriDisplay();
             item.x = i*2;
@@ -33,16 +34,13 @@ class PerformanceScene extends PriScene {
             item.width = 100*Math.random();
             item.height = 100*Math.random();
             item.bgColor = Std.int(0xFFFFFF * Math.random());
-//            this.addChild(item);
 
             l.push(item);
         }
 
-        for (i in 0 ... l.length) {
-            this.addChild(l[i]);
-        }
+        this.addChildList(l);
 
-        t.text = "t4 : " + Std.string(Date.now().getTime() - timeStart);
+        t.text = "t5 : " + total + " itens - " + Std.string(Date.now().getTime() - timeStart);
 
     }
 }

@@ -47,8 +47,8 @@ class MouseContent extends PriGroup {
         this.vlabel = new PriText();
         this.vlabel.fontSize = 8;
         this.vlabel.anchorX = 0;
-        this.vlabel.anchorY = 1;
-        this.vlabel.rotation = -90;
+        this.vlabel.anchorY = 0;
+        this.vlabel.rotation = 90;
         this.addChild(this.vlabel);
 
         this.plane = new PriDisplay();
@@ -81,9 +81,10 @@ class MouseContent extends PriGroup {
         this.vline.y = 0;
 
         this.vlabel.text = Std.string(mp.x);
-        this.vlabel.x = this.vline.x + 2;
-        this.vlabel.maxY = 2;
-        if (this.vlabel.x + this.vlabel.height > this.width) this.vlabel.x = this.vline.x - this.vlabel.height - 2;
+        this.vlabel.x = this.vline.x + this.vlabel.width + 2;
+        this.vlabel.y = 2;
+
+        if (this.vlabel.x + this.vlabel.width > this.width) this.vlabel.x = this.vline.x - 2;
     }
 
     override private function paint():Void {
